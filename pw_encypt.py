@@ -5,14 +5,6 @@ password_encryptor.py
 A super-advanced Python password encryptor with layered, memory-hard key derivation,
 multiple symmetric ciphers, HMAC authentication, and seamless CLI for encryption/decryption.
 
-Features (9/10 difficulty):
-  - Argon2id raw KDF for master key derivation (memory-hard, high iteration counts)
-  - HKDF-SHA512 to split master key into AES, ChaCha, and HMAC subkeys
-  - Dual-layer encryption: AES-256-GCM then ChaCha20-Poly1305
-  - HMAC-SHA512 tag over all parameters to prevent tampering
-  - JSON envelope with Base64-encoded fields for portability
-  - Secure random salt/nonces via secrets.system
-
 Usage:
   # Encrypt a password
   python password_encryptor.py encrypt \
